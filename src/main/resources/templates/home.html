@@ -24,8 +24,15 @@
 
     <!-- Check for login error -->
     <div th:if="${session.user}">
-        <p th:text="'First name: ' + ${session.user.firstName} + ', Last name: ' + ${session.user.lastName} + ', Email: ' + ${session.user.email}"></p>
-        <a th:href="@{/users/list}">CRUD operations</a>
+        <p th:text="'First name: ' + ${session.user.firstName} + ',
+             Last name: ' + ${session.user.lastName} + ', Email: ' + ${session.user.email}">
+        </p>
+
+        <!-- -----------------------   redirect to another CRUD App!    ------------------------------- -->
+        <br>
+        <hr>
+        <a href="http://localhost:8081/crud/">CRUD operations</a>
+        <!-- ------------------------------------------------------------------------------------------ -->
     </div>
 </div>
 

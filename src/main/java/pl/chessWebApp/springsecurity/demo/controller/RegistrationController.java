@@ -56,10 +56,10 @@ public class RegistrationController {
         }
 
         // check the database if user or email already exists
-        User existing = userService.findByUserName(userName);
-        User existing2 = userService.findByUserEmail(userEmail);
+        User isExisting = userService.findByUserName(userName);
+        User isExisting2 = userService.findByUserEmail(userEmail);
 
-        if (existing != null || existing2 != null) {
+        if (isExisting != null || isExisting2 != null) {
             theModel.addAttribute("crmUser", new CrmUser());
             theModel.addAttribute("registrationError", "User name or email already exists.");
 
