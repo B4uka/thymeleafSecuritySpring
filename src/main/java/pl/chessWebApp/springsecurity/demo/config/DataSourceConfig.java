@@ -25,7 +25,8 @@ public class DataSourceConfig {
         // in application properties
 
         //from https://www.baeldung.com/spring-boot-configure-data-source-programmatic:
-        // "Externalizing DataSource Configuration with the application.properties file"  - not working as describe; check comment section
+        // "Externalizing DataSource Configuration with the application.properties file"  - not working as describe;
+        // check comment section (@Primary might be the answer? https://stackoverflow.com/questions/28821521/configure-datasource-programmatically-in-spring-boot
 
     }
 }
