@@ -1,4 +1,4 @@
-package pl.chessWebApp.springsecurity.demo.controller;
+package pl.wb.demo.security.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -7,9 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import pl.chessWebApp.springsecurity.demo.entity.User;
-import pl.chessWebApp.springsecurity.demo.service.UserService;
-import pl.chessWebApp.springsecurity.demo.user.CrmUser;
+import pl.wb.demo.security.entity.User;
+import pl.wb.demo.security.service.UserService;
+import pl.wb.demo.security.user.CrmUser;
 
 import javax.validation.Valid;
 import java.util.logging.Logger;

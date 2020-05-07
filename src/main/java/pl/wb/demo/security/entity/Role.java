@@ -1,4 +1,4 @@
-package pl.chessWebApp.springsecurity.demo.entity;
+package pl.wb.demo.security.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

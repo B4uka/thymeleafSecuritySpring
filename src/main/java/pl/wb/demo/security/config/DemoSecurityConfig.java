@@ -1,4 +1,4 @@
-package pl.chessWebApp.springsecurity.demo.config;
+package pl.wb.demo.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import pl.chessWebApp.springsecurity.demo.service.UserService;
+import pl.wb.demo.security.service.UserService;
 
 @Configuration
 @EnableWebSecurity

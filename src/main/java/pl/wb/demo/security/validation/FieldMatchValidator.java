@@ -1,39 +1,37 @@
-package pl.chessWebApp.springsecurity.demo.validation;
+package pl.wb.demo.security.validation;
+
+import org.springframework.beans.BeanWrapperImpl;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import org.springframework.beans.BeanWrapperImpl;
-
 public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Object> {
-	
-	private String firstFieldName;
+
+    private String firstFieldName;
     private String secondFieldName;
     private String message;
 
     @Override
-    public void initialize(final FieldMatch constraintAnnotation) {
-	    	firstFieldName = constraintAnnotation.first();
-	    	secondFieldName = constraintAnnotation.second();
+    public void initialize (final FieldMatch constraintAnnotation) {
+        firstFieldName = constraintAnnotation.first();
+        secondFieldName = constraintAnnotation.second();
+
         message = constraintAnnotation.message();
     }
 
     @Override
-    public boolean isValid(final Object value, final ConstraintValidatorContext context) {
+    public boolean isValid (final Object value, final ConstraintValidatorContext context) {
         boolean valid = true;
-        try
-        {
+        try {
             final Object firstObj = new BeanWrapperImpl(value).getPropertyValue(firstFieldName);
             final Object secondObj = new BeanWrapperImpl(value).getPropertyValue(secondFieldName);
 
-            valid =  firstObj == null && secondObj == null || firstObj != null && firstObj.equals(secondObj);
-        }
-        catch (final Exception ignore)
-        {
-            // we can ignore
+            valid = firstObj == null && secondObj == null || firstObj != null && firstObj.equals(secondObj);
+        } catch (final Exception ignore) {//final in that kind of situations: https://stackoverflow.com/questions/3516816/java-meaning-of-catch-final-someexception-e
+            // we can ignore?
         }
 
-        if (!valid){
+        if (!valid) {
             context.buildConstraintViolationWithTemplate(message)
                     .addPropertyNode(firstFieldName)
                     .addConstraintViolation()
@@ -42,5 +40,5 @@ public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Obje
 
         return valid;
     }
-	
+
 }

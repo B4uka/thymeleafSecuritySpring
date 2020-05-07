@@ -1,11 +1,11 @@
-package pl.chessWebApp.springsecurity.demo.config;
+package pl.wb.demo.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-import pl.chessWebApp.springsecurity.demo.entity.User;
-import pl.chessWebApp.springsecurity.demo.service.UserService;
+import pl.wb.demo.security.entity.User;
+import pl.wb.demo.security.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +36,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
         session.setAttribute("user", theUser);
 
         // forward to home page
-
         response.sendRedirect(request.getContextPath() + "/");
     }
 

@@ -1,4 +1,4 @@
-package pl.chessWebApp.springsecurity.demo.controller;
+package pl.wb.demo.security.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

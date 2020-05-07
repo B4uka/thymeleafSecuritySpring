@@ -1,4 +1,4 @@
-package pl.chessWebApp.springsecurity.demo.validation;
+package pl.wb.demo.security.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

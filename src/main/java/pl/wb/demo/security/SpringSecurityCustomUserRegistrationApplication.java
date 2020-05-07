@@ -1,4 +1,4 @@
-package pl.chessWebApp.springsecurity.demo;
+package pl.wb.demo.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +8,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class SpringSecurityCustomUserRegistrationApplication extends SpringBootServletInitializer {
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+@Override
+protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(SpringSecurityCustomUserRegistrationApplication.class);
 	}
 
@@ -17,3 +17,4 @@ public class SpringSecurityCustomUserRegistrationApplication extends SpringBootS
 		SpringApplication.run(SpringSecurityCustomUserRegistrationApplication.class, args);
 	}
 }
+

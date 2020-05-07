@@ -1,8 +1,8 @@
-package pl.chessWebApp.springsecurity.demo.service;
+package pl.wb.demo.security.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
-import pl.chessWebApp.springsecurity.demo.entity.User;
-import pl.chessWebApp.springsecurity.demo.user.CrmUser;
+import pl.wb.demo.security.entity.User;
+import pl.wb.demo.security.user.CrmUser;
 
 //from https://www.baeldung.com/spring-security-authentication-with-a-database about UserDetailsService interface
 

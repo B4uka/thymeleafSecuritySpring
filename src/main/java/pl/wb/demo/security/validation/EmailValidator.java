@@ -1,10 +1,9 @@
-package pl.chessWebApp.springsecurity.demo.validation;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package pl.wb.demo.security.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EmailValidator implements ConstraintValidator<ValidEmail, String> {
 

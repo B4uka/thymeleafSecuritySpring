@@ -1,6 +1,6 @@
-package pl.chessWebApp.springsecurity.demo.dao;
+package pl.wb.demo.security.dao;
 
-import pl.chessWebApp.springsecurity.demo.entity.User;
+import pl.wb.demo.security.entity.User;
 
 public interface UserDao {
 

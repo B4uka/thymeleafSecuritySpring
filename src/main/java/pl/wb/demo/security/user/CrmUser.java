@@ -1,10 +1,10 @@
-package pl.chessWebApp.springsecurity.demo.user;
+package pl.wb.demo.security.user;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import pl.chessWebApp.springsecurity.demo.validation.FieldMatch;
-import pl.chessWebApp.springsecurity.demo.validation.ValidEmail;
+import pl.wb.demo.security.validation.FieldMatch;
+import pl.wb.demo.security.validation.ValidEmail;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

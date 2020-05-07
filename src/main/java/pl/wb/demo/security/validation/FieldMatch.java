@@ -1,13 +1,8 @@
-package pl.chessWebApp.springsecurity.demo.validation;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Documented;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+package pl.wb.demo.security.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import java.lang.annotation.*;
 
 @Constraint(validatedBy = FieldMatchValidator.class)
 @Target({ ElementType.TYPE, ElementType.ANNOTATION_TYPE })

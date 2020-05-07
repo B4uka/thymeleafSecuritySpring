@@ -1,10 +1,10 @@
-package pl.chessWebApp.springsecurity.demo.service;
+package pl.wb.demo.security.service;
 
-import pl.chessWebApp.springsecurity.demo.dao.RoleDao;
-import pl.chessWebApp.springsecurity.demo.dao.UserDao;
-import pl.chessWebApp.springsecurity.demo.entity.Role;
-import pl.chessWebApp.springsecurity.demo.entity.User;
-import pl.chessWebApp.springsecurity.demo.user.CrmUser;
+import pl.wb.demo.security.dao.RoleDao;
+import pl.wb.demo.security.dao.UserDao;
+import pl.wb.demo.security.entity.Role;
+import pl.wb.demo.security.entity.User;
+import pl.wb.demo.security.user.CrmUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
