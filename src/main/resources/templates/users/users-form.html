@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title>Save New User</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>User Directory</h3>
+        <hr>
+
+        <p class="h4 mb-4">Save User</p>
+
+        <form action="#" th:action="@{/users/save}"
+                         th:object="${user}" method="POST">
+            <!-------------------------  Add hidden form field to handle update---------------------------- -->
+            <input type="hidden" th:field="*{id}">
+
+            <!--  setter behind the scenes  -->
+            <input type="text" th:field="*{firstName}"
+                       class="form-control mb-4 col-4" placeholder="First name">
+            <input type="text" th:field="*{lastName}"
+                       class="form-control mb-4 col-4" placeholder="Last name">
+            <input type="text" th:field="*{email}"
+                       class="form-control mb-4 col-4" placeholder="Email">
+
+            <!--  Don't want to update creation time      -->
+            <input type="hidden" th:field="*{accountCreationDate}">
+
+
+            <button type="submit" class="btn btn-info col-2">Save</button>
+        </form>
+        <a th:href="@{/users/list}">Back to Users list</a>
+    </div>
+</body>
+
+</html>
+
