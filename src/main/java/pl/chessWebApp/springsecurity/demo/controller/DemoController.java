@@ -12,20 +12,20 @@ public class DemoController {
 		return "home";
 	}
 	
-	// add request mapping for /leaders
+	// add request mapping for /managers
 
-	@GetMapping("/leaders")
+	@GetMapping("/managers")
 	public String showLeaders() {
 		
-		return "leaders";
+		return "managers";
 	}
 	
-	// add request mapping for /systems
+	// add request mapping for /admin
 	
-	@GetMapping("/systems")
+	@GetMapping("/admin")
 	public String showSystems() {
 		
-		return "systems";
+		return "admin";
 	}
 	
 }
