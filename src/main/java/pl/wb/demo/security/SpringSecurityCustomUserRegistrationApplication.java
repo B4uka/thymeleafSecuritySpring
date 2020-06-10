@@ -8,13 +8,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class SpringSecurityCustomUserRegistrationApplication extends SpringBootServletInitializer {
 
-@Override
-protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(SpringSecurityCustomUserRegistrationApplication.class);
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SpringSecurityCustomUserRegistrationApplication.class);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityCustomUserRegistrationApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityCustomUserRegistrationApplication.class, args);
+    }
 }
 

@@ -24,7 +24,7 @@ public class RegistrationController {
     private Logger logger = Logger.getLogger(getClass().getName());
 
     @InitBinder
-    public void initBinder (WebDataBinder dataBinder) {
+    public void initBinder(WebDataBinder dataBinder) {
 
         StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 
@@ -32,7 +32,7 @@ public class RegistrationController {
     }
 
     @GetMapping("/showRegistrationForm")
-    public String showMyLoginPage (Model theModel) {
+    public String showMyLoginPage(Model theModel) {
 
         theModel.addAttribute("crmUser", new CrmUser());
 
@@ -40,7 +40,7 @@ public class RegistrationController {
     }
 
     @PostMapping("/processRegistrationForm")
-    public String processRegistrationForm (
+    public String processRegistrationForm(
             @Valid @ModelAttribute("crmUser") CrmUser theCrmUser,
             BindingResult theBindingResult,
             Model theModel) {
